@@ -10,7 +10,7 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.SessionFactory;
 import ru.ivmiit.models.User;
 
-public class App {
+public class AppXmlConfig {
     private static SessionFactory factory;
     public static void main(String[] args) {
 
@@ -25,7 +25,7 @@ public class App {
             throw new ExceptionInInitializerError(ex);
         }
 
-        App ME = new App();
+        AppXmlConfig ME = new AppXmlConfig();
 
         /* Add few employee records in database */
         Integer empID1 = ME.addEmployee("Zara", "Ali", 1000);
