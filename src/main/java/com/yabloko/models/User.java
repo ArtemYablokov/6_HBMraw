@@ -1,14 +1,7 @@
-package ru.ivmiit.models;
+package com.yabloko.models;
 
 import java.util.List;
 
-/**
- * 04.04.2018
- * User
- *
- * @author Sidikov Marsel (First Software Engineering Platform)
- * @version v1.0
- */
 public class User {
     private Integer id;
     private String firstName;

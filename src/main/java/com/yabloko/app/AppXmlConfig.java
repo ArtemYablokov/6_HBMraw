@@ -1,14 +1,14 @@
-package ru.ivmiit.app;
+package com.yabloko.app;
 
 import java.util.List;
 import java.util.Iterator;
 
+import com.yabloko.models.User;
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.SessionFactory;
-import ru.ivmiit.models.User;
 
 public class AppXmlConfig {
     private static SessionFactory factory;

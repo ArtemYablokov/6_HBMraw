@@ -1,22 +1,13 @@
-package ru.ivmiit.app;
+package com.yabloko.app;
 
+import com.yabloko.models.Car;
+import com.yabloko.models.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import ru.ivmiit.models.Car;
-import ru.ivmiit.models.User;
 
-import javax.persistence.EntityManager;
 import java.util.List;
 
-
-/**
- * 04.04.2018
- * ru.ivmiit.app.Application
- *
- * @author Sidikov Marsel (First Software Engineering Platform)
- * @version v1.0
- */
 public class AppRaw {
     public static void main(String[] args) {
 

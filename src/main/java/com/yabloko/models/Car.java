@@ -1,14 +1,7 @@
-package ru.ivmiit.models;
+package com.yabloko.models;
 
 import javax.persistence.*;
 
-/**
- * 04.04.2018
- * Car
- *
- * @author Sidikov Marsel (First Software Engineering Platform)
- * @version v1.0
- */
 @Entity
 @Table(name = "fix_car")
 public class Car {
