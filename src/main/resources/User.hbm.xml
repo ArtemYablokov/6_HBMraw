@@ -9,8 +9,32 @@
             <generator class="identity"/>
         </id>
 
-        <property name="age" column="age"/>
+        <property name="salary" column="salary"/>
         <property name = "firstName" column = "first_name"/>
         <property name = "lastName" column = "last_name"/>
+
+
+<!--        <property name = "cars" column = "cars"/>-->
+
+<!--        <set name="cars">-->
+<!--            <key column="CAR_ID"/>-->
+<!--            <one-to-many class="com.yabloko.models.Car"/>-->
+<!--        </set>-->
+
+<!--        <set name="cars" table="apple_car" inverse="true" cascade="save-update" lazy="true" fetch="select">-->
+<!--            <key>-->
+<!--                <column name="ID" not-null="true" /> &lt;!&ndash; FOREIGN KEY &ndash;&gt;-->
+<!--            </key>-->
+<!--            <one-to-many class="com.yabloko.models.Car" />-->
+<!--        </set>-->
+
+<!--        <set name="document" table="apple_car" inverse="true" cascade="save-update" lazy="true" fetch="select">-->
+<!--            <key>-->
+<!--                <column name="CAR_ID" not-null="true" />-->
+<!--            </key>-->
+<!--            <one-to-many class="com.yabloko.models.Car" />-->
+<!--        </set>-->
+
+
     </class>
 </hibernate-mapping>

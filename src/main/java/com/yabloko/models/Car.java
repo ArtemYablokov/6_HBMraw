@@ -3,7 +3,7 @@ package com.yabloko.models;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "fix_car")
+@Table(name = "apple_car")
 public class Car {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -40,5 +40,14 @@ public class Car {
     }
     public void setOwner(User owner) {
         this.owner = owner;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "id=" + id +
+                ", model='" + model + '\'' +
+                ", owner=" + owner +
+                '}';
     }
 }

@@ -13,7 +13,7 @@ public class AppRaw {
 
         Configuration configuration = new Configuration();
         //
-        configuration.setProperty("hibernate.connection.url", "jdbc:postgresql://localhost:5432/hbm_raw");
+        configuration.setProperty("hibernate.connection.url", "jdbc:postgresql://localhost:5432/fix_hbm_raw");
         configuration.setProperty("hibernate.connection.username", "postgres");
         configuration.setProperty("hibernate.connection.password", "apple");
         configuration.setProperty("hibernate.connection.driver_class", "org.postgresql.Driver");
@@ -27,17 +27,28 @@ public class AppRaw {
 
         configuration.setProperty("hibernate.show_sql", "true");
 
+        int n = 0;
+
         SessionFactory sessionFactory = configuration.buildSessionFactory();
         Session session = sessionFactory.openSession();
 
-        User user = session.createQuery("from User user where user.id = 1", User.class).getSingleResult();
-
         session.beginTransaction();
+        session.save(new User("a", "a", 99));
 
-        session.save(new User("Mini", "Max", 99));
+        User user = session.createQuery("from User user where user.id = 15", User.class ).getSingleResult();
+
+        Car car = new Car(0, "model", user);
+
+        session.save(car);
+
+
+        List<Car> cars = session.createQuery("from Car car", Car.class).getResultList();
+        List<User> users = session.createQuery("from User car", User.class).getResultList();
+
+
         session.getTransaction().commit();
-
-        List<Car> car = session.createQuery("from Car car", Car.class).getResultList();
+        session.close();
+        sessionFactory.close();
 
 
     }

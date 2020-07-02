@@ -1,21 +1,25 @@
 package com.yabloko.models;
 
 import java.util.List;
+import java.util.Set;
 
 public class User {
     private Integer id;
     private String firstName;
     private String lastName;
-    private Integer age;
-    private List<Car> cars;
+    private Integer salary;
+
+    Document document;
+
+    private Set<Car> cars;
 
     public User() {
     }
 
-    public User(String firstName, String lastName, Integer age) {
+    public User(String firstName, String lastName, Integer salary) {
         this.firstName = firstName;
         this.lastName = lastName;
-        this.age = age;
+        this.salary = salary;
     }
 
     public User(Integer id, String firstName, String lastName) {
@@ -24,7 +28,7 @@ public class User {
         this.lastName = lastName;
     }
 
-    public User(Integer id, String firstName, String lastName, List<Car> cars) {
+    public User(Integer id, String firstName, String lastName, Set<Car> cars) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -55,21 +59,21 @@ public class User {
         this.lastName = lastName;
     }
 
-    public List<Car> getCars() {
+    public Set<Car> getCars() {
         return cars;
     }
 
-    public void setCars(List<Car> cars) {
+    public void setCars(Set<Car> cars) {
         this.cars = cars;
     }
 
-    public Integer getAge() {
-        return age;
+    public Integer getSalary() {
+        return salary;
+    }
+    public void setSalary(Integer salary) {
+        this.salary = salary;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
 
     @Override
     public String toString() {
